@@ -21,9 +21,7 @@ game_data = {
     'eagle_icon': "\U0001F985",# 🦅
     'obstacle': "\U0001FAA8 ",# 🪨
     'leaf': "\U0001F343",# 🍃
-    'empty': "  ",
-
-    'play_again': True,
+    'empty': "  "
 }
 
 def display_welcome_screen():

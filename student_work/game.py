@@ -1,5 +1,9 @@
 # Write your game here
 
+
+
+print("welcome to the trucker diet game")
+
 game_data = {
     # Store board dimensions, player/enemy positions, score, energy, collectibles, and icons
 }

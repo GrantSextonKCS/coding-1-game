@@ -10,13 +10,26 @@ Part I: Planning & Design (15 pts)
 * Determine win / lose conditions
 * Outline expansion ideas
 
-Game Idea:
+Game: Trucker diet game/ Quest to 1800 miles
+
+How to win: get all of the essentials for the trucker diet
+
+Players: Uncle rob, Elvis, Joe
+
+Icons: 
 
 
-Game Rules:
 
+Scoring: its kind of a one and done kind of deal. You have to go up to the cashier and if you miss and ingredients
+it will say "looks like your missing something rob" So the scoring for this game is not gonna be like your traditional game
+but the scoring will be a lot diffrent.
 
-Major Game Elements:
+Expand ideas: You actully get to get in your truck and drive to the place you are apposed to truck too.
 
-
-Gameplay Process:
+step by step:
+1. You walk in to the merdzic gas station
+2. the cashier says hi to you and says "trucker diet today"
+3. you then will have a set of opitons to say such as "yeah" "well see" and "maybe"
+4. You walk around and look for ingredients for the trucker diet going row by row looking for the diffrent parts of the trucking diet
+5. you have to go to the cashier and check if they are all the correct ingredients
+6. if they are not the correct ingredients then you must go and reconsider 

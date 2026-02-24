@@ -12,9 +12,10 @@ Part I: Planning & Design (15 pts)
 
 Game: Trucker diet game/ Quest to 1800 miles
 
-How to win: get all of the essentials for the trucker diet
+How to win: get all of the essentials for the trucker diet. Find all of them in the store and take them to the cashier.
+if all ingredients are present. Then you have won the game. You have won the game by getting the full trucker diet
 
-Players: Uncle rob, Elvis, Joe
+Players: Uncle rob, Elvis, Joe, 
 
 Icons: 
 

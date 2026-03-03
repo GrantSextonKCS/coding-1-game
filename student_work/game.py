@@ -11,12 +11,13 @@ game_data = {
     'width': 10,
     'height': 20,
     'player': {"x": 0, "y": 0, "score": 0, "energy": 10, "max_energy": 10},
-    'eagle_pos': {"x": 4, "y": 4},
+    'eagle_pos': {"x": 4, "y": 4}, 
+    'leaf': {"x": 2, "y" : 6},
     'collectibles': [
         {"x": 2, "y": 1, "collected": False},
     ],
     'obstacles': [
-        {"x": 1, "y": 2},
+        {"x": 2, "y": 2},
         {"x": 3, "y": 1}
     ],
 
@@ -56,4 +57,7 @@ def draw_board(stdscr):
     stdscr.refresh()
     stdscr.getkey()  # pause so player can see board
 
-curses.wrapper(draw_board)
+# curses.wrapper(draw_board)
+
+print (game_data['eagle_icon'])
+print (game_data['leaf'])

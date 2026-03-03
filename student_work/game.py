@@ -18,7 +18,8 @@ game_data = {
     ],
     'obstacles': [
         {"x": 2, "y": 2},
-        {"x": 3, "y": 1}
+        {"x": 5, "y": 4},
+        {"x": 5, "y": 3}
     ],
 
     # ASCII icons
@@ -57,7 +58,8 @@ def draw_board(stdscr):
     stdscr.refresh()
     stdscr.getkey()  # pause so player can see board
 
-# curses.wrapper(draw_board)
+curses.wrapper(draw_board)
 
-print (game_data['eagle_icon'])
-print (game_data['leaf'])
+# print (game_data['eagle_icon'])
+# print (game_data['leaf'])
+

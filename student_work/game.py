@@ -9,7 +9,7 @@ import curses
 
 game_data = {
     'width': 10,
-    'height': 20,
+    'height': 10,
     'player': {"x": 0, "y": 0, "score": 0, "energy": 10, "max_energy": 10},
     'eagle_pos': {"x": 4, "y": 4}, 
     'leaf': {"x": 2, "y" : 6},
@@ -55,10 +55,58 @@ def draw_board(stdscr):
                 row += game_data['empty']
         stdscr.addstr(y, 0, row, curses.color_pair(1))
 
-    stdscr.refresh()
-    stdscr.getkey()  # pause so player can see board
+    # stdscr.refresh()
+    # stdscr.getkey()  
 
-curses.wrapper(draw_board)
+def move_player(key):
+    x = game_data['monkey']['x']
+    y = game_data['player']['y']
+
+    new_x, new_y = x, y
+    key = key.lower()
+
+    if key == "w" and y > 0:
+        new_y -= 1
+    elif key == "s" and y < game_data['height'] - 1:
+        new_y += 1
+    elif key == "a" and x > 0:
+        new_x -= 1
+    elif key == "d" and x < game_data['width'] - 1:
+        new_x += 1
+    else:
+        return  # Invalid key or move off board
+
+    # Check for obstacles
+    if any(o['x'] == new_x and o['y'] == new_y for o in game_data['obstacles']):
+        return
+
+    # Update position and increment score
+    game_data['player']['x'] = new_x
+    game_data['player']['y'] = new_y
+    game_data['player']['score'] += 1
+
+def main(stdscr):
+    curses.curs_set(0)
+    stdscr.nodelay(True)
+
+    draw_board(stdscr)
+
+    while True:
+        try:
+            key = stdscr.getkey()
+        except:
+            key = None
+
+        if key:
+            if key.lower() == "q":
+                break
+
+            move_player(key)
+            draw_board(stdscr)
+
+curses.wrapper(main)
+
+# curses.wrapper(draw_board)
 
 # print (game_data['eagle_icon'])
 # print (game_data['leaf'])

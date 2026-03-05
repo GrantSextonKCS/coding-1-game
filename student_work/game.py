@@ -30,7 +30,7 @@ game_data = {
     'turtle': "\U0001F64D",
     'eagle_icon': "\U0001F647",
     'obstacle': "\U0001F3E2",
-    'leaf': "\U0001F343",
+    'leaf': "\U0001F36B",
     'empty': "  "
 }
 

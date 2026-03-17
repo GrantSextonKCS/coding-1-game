@@ -21,9 +21,10 @@ game_data = {
         {"x": 5, "y": 4},
         {"x": 5, "y": 3},
         {"x": 5, "y": 2},
-        {"x": 7, "y": 4},
-        {"x": 7, "y": 3},
-        {"x": 7, "y": 2},
+        {"x": 8, "y": 4},
+        {"x": 8, "y": 3},
+        {"x": 8, "y": 2},
+        {"x": 2, "y": 3},
     ],
 
     # ASCII icons
@@ -31,7 +32,8 @@ game_data = {
     'eagle_icon': "\U0001F647",
     'obstacle': "\U0001F3E2",
     'leaf': "\U0001F36B",
-    'empty': "  "
+    'gummy': "\U0001F43B",
+    'empty': " "
 }
 
 def draw_board(stdscr):
@@ -63,7 +65,7 @@ def draw_board(stdscr):
     # stdscr.getkey()  
 
 def move_player(key):
-    x = game_data['monkey']['x']
+    x = game_data['player']['x']
     y = game_data['player']['y']
 
     new_x, new_y = x, y

@@ -13,6 +13,7 @@ game_data = {
     'player': {"x": 0, "y": 0, "score": 0, "energy": 10, "max_energy": 10},
     'eagle_pos': {"x": 4, "y": 4}, 
     'leaf': {"x": 2, "y" : 6},
+    'gummy': {"x": 8, "y" : 4},
     'collectibles': [
         {"x": 2, "y": 1, "collected": False},
     ],
@@ -21,9 +22,9 @@ game_data = {
         {"x": 5, "y": 4},
         {"x": 5, "y": 3},
         {"x": 5, "y": 2},
-        {"x": 8, "y": 4},
-        {"x": 8, "y": 3},
-        {"x": 8, "y": 2},
+        {"x": 9, "y": 4},
+        {"x": 9, "y": 3},
+        {"x": 9, "y": 2},
         {"x": 2, "y": 3},
     ],
 
@@ -112,6 +113,19 @@ def main(stdscr):
 
 curses.wrapper(main)
 
+def move_eagle():
+    directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+    random.shuffle(directions)
+    ex, ey = game_data['eagle_pos']['x'], game_data['eagle_pos']['y']
+
+    for dx, dy in directions:
+        new_x = ex + dx
+        new_y = ey + dy
+        if 0 <= new_x < game_data['width'] and 0 <= new_y < game_data['height']:
+            if not any(o['x'] == new_x and o['y'] == new_y for o in game_data['obstacles']):
+                game_data['eagle_pos']['x'] = new_x
+                game_data['eagle_pos']['y'] = new_y
+                break
 # curses.wrapper(draw_board)
 
 # print (game_data['eagle_icon'])
